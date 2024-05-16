@@ -1,0 +1,440 @@
+:root {
+    --color-default: #202020;
+    /* grey */
+    --color-dark-grey: #606060;
+    --color-medium-grey: #cdcdcd;
+    --color-light-grey: #e5e5e5;
+    /* white */
+    --color-white-90: #edeeed;  /* 90% white */
+    --color-white-100: #fff; /* 100% white */
+    /* default brand color */
+    --color-brand-default: #6c64e2; /* #6C64e2 #7DCD51*/
+    --color-brand-default-2: #944FD0; /* #944FD0 #30D24A*/
+    --color-brand-default-var: rgba(108, 100, 226, 0.1); /* default brand color with 10% opacity*/
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 16px; /* 16px = 1rem  by default */ /* 62.5% (another option) */
+}
+
+body {
+    font-family: 'Be Vietnam Pro', 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.project-desc, .project-tag {
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* --- LAYOUT --- */
+section {
+    padding: 60px 0; 
+}
+
+footer {
+    padding: 40px 0;
+}
+
+.stack-container,
+.contact-container {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav {
+    height: 80px;
+}
+
+header, 
+section,
+footer {
+    text-align: center;
+    color: var(--color-default);
+}
+
+/* -- display -- */
+.flex { 
+    display: flex;
+}
+
+.block {
+    display: block;
+}
+
+a, button, ul li {
+    cursor: pointer;
+}
+
+/* -- bg-color -- */
+.about-me, footer {
+    background-color: var(--color-default);
+}
+
+.my-projects {
+    background-color: var(--color-white-90);
+}
+
+
+/* --- NAVBAR --- */
+header {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    /* position: sticky; */
+    top: 0;
+}
+
+ul{
+    align-items: center;
+}
+
+/* .main-logo, ul li{
+    white-space: nowrap;
+} */
+
+ul {
+    padding-left: 0px;
+}
+
+.main-logo {
+    font-weight: 700;
+    margin-right: auto;
+    align-self: center;
+}
+
+ul li{
+    list-style-type: none;
+    /* border: 1px solid black; */
+    padding: 0.375em; /* 6px/16px */
+    margin-left: 0.375em; /* 6px/16px */
+}
+
+li a {
+    text-decoration: none;
+    color: var(--color-default);
+}
+
+
+
+ul li:nth-last-child(1) {
+    border: 1px solid var(--color-default);
+    border-radius: 4px;
+}
+
+ul li:hover a {
+    color: var(--color-brand-default);
+}
+
+ul li:hover > .hire-me {
+    color: var(--color-white-100);
+}
+
+ul li:nth-last-child(1):hover,
+ul li:nth-last-child(1):active {
+    background: linear-gradient(
+        125deg, 
+        var(--color-brand-default),
+        var(--color-brand-default-2)
+    );
+    border-color: var(--color-brand-default);
+}
+
+/* ul li:nth-last-child(1):hover::after {
+    content: "!";
+    color: var(--color-white-100); 
+} */
+
+
+/* --- ABOUT ME --- */
+.profile-img {
+    max-width: 200px;
+}
+
+h1 {
+    font-size: 2.375rem; /* 38px */
+    font-weight: 800;
+    line-height: 0.9;
+    text-transform: uppercase;
+    margin: 0.2em auto; /* 8px/42px auto */
+}
+
+.name-text  {
+    width: inherit;
+}
+
+.main-title,
+.name-text {
+    background: linear-gradient(
+        45deg, 
+        var(--color-brand-default) ,
+        var(--color-brand-default-2)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.sub-title {
+    color: var(--color-white-100);
+    font-size: 1rem; /* 18px */
+    font-weight: 400;
+    margin: 1.5em;
+}
+
+.intro-text {
+    color: var(--color-white-90);
+    font-weight: 300;
+    margin: 1.5em auto 2.5em;  /* 0 auto 50px/16px */
+    width: 80%; /* 350px */
+    line-height: 1.5;
+}
+
+
+/* --- MY STACK --- */
+h2 {
+    font-size: 2rem; /* 32px */
+    margin: 0 auto 1.25em; /* 0 auto 40px/32px */
+}
+
+.stack-title {
+    font-size: 0.875rem; /* 14px */  
+    line-height: 1.1;
+    display: block;
+    width: 100px;
+    color: var(--color-dark-grey);
+}
+
+.stack-item {
+    margin: 0 0.1em 1.5em;
+}
+
+.stack-icon {
+    width: 40px; 
+    margin-bottom: 4px;
+}
+
+
+/* --- MY PROJECTS --- */
+/* -- font-color and style */
+a.project-card {
+    text-decoration: none;
+    text-align: left;
+    color: var(--color-default);
+}
+
+h3.project-title{
+    font-size: 1.125rem; /* 18px */
+    font-weight: 700;
+    margin-bottom: 0.45em; /* 8px/18px */
+}
+
+.project-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.project-desc, .project-tags-container {
+    color: var(--color-dark-grey);
+}
+
+.project-tag { 
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    background-color: var(--color-brand-default-var);
+    border-radius: 50px;
+    padding: 0.5em 1em;
+    margin: 0 6px 6px 0;
+}
+
+/* -- project layout -- */
+.project-title, .project-desc, .project-tags-container {
+    padding: 0 20px;
+}
+
+.project-card { 
+    background-color: var(--color-white-100);   
+    flex-direction: column;
+    flex: 0 0 auto; /* Prevent flex items from shrinking */
+    scroll-snap-align: center;
+    width: 90%;
+    height: 500px;
+    border-radius: 12px;
+    margin: 0 20px 24px;
+    transition: ease 0.3s;
+}
+
+.project-card:hover,
+.project-card:hover a .project-title { 
+    box-shadow: 0 0 12px var(--color-medium-grey);
+    color: var(--color-brand-default);
+}
+
+.project-img {
+    width: 100%;
+    height: 45%;
+    object-fit: cover;
+    object-position: center 7.5%; /* position the img to show slightly below the top */
+    border-radius: 12px 12px 0 0;
+}
+
+.project-tags-container {
+    margin: auto 0 12px;
+    flex-wrap: wrap;
+}
+
+.projects-container {
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+}
+
+.other-projects {
+    margin: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* --- FOOTER --- */
+.contact-icon {
+    font-size: 1.75rem; /* 28px */
+    margin: 0 0.57em; /* 0 16px/28px */
+    color: var(--color-light-grey);
+}
+
+.contact-icon:hover {
+    color: var(--color-brand-default);
+}
+
+.web-description,
+.copyright-text {
+    color: var(--color-light-grey);
+    font-weight: 300;
+    font-size: 0.75rem; /* 12px */
+}
+
+.copyright-text {
+    padding-top: 1.75em; /* 20px/12px */
+    margin: 0 auto;
+    border-top: 1px solid var(--color-dark-grey);
+}
+
+.web-description {
+    margin: 2.5em auto 1.7em; /* 30px/12px auto 20px/12px */
+    width: 95%; /* 400px */
+}
+
+/* ---  BTN ---  */
+.scroll-btn {
+    font-family: inherit;
+    width: 45px;
+    height: 45px;
+    border-radius: 100px;
+    color: var(--color-dark-grey);
+    background-color: var(--color-white-100);
+    border: none;
+    padding: 0.5em;
+    justify-content: center;
+    align-items: center;
+    transition: ease 0.3s;
+}
+
+.scroll-btn p {
+    margin: 0;
+    font-size: 1rem; 
+}
+
+.scroll-btn:hover,
+.scroll-btn:active {
+    /* background-color: var(--color-brand-default); */
+    background-color: var(--color-brand-default);
+    color: var(--color-white-100);
+}
+
+.scroll-left:hover {
+    transform: translateX(-4px);
+}
+
+.scroll-right:hover {
+    transform: translateX(4px);
+}
+
+/* -- btn-link -- */
+.resume-btn,
+.project-link,
+.other-project-btn {
+    text-decoration: none;
+}
+
+.resume-btn,
+.other-project-btn {
+    font-size: 0.875rem; /* 14px */
+    font-weight: 300;
+    padding: 0.75em 1.5em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.resume-btn {
+    color: var(--color-light-grey);
+    border: 1px solid var(--color-light-grey);
+}
+
+.other-project-btn{
+    color: var(--color-dark-grey);
+    border: 1px solid var(--color-dark-grey);
+}
+
+.resume-btn:hover,
+.other-project-btn:hover,
+.resume-btn:active,
+.other-project-btn:active  {
+    color: var(--color-white-100);
+    /* background-color: var(--color-brand-default); */
+    background: linear-gradient(
+        125deg, 
+        var(--color-brand-default),
+        var(--color-brand-default-2)
+    );
+    font-weight: 400;
+    border: 1px solid var(--color-brand-default);
+}
+
+
+/* --   MEDIA QUERIES --- */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+
+    .main-title {
+        font-size: 3rem; /* 48px */
+    }
+
+    h2 {
+        font-size: 2.25rem; /* 36px */
+    }
+
+    .profile-container { padding: 0 220px }
+    .stack-container { width: 768px; margin: 0 auto;}
+
+    .project-card { 
+        width: 36%;
+        height: 480px;
+    }
+} 
