@@ -1,13 +1,10 @@
 :root {
     --color-default: #202020;
-    /* grey */
     --color-dark-grey: #606060;
     --color-medium-grey: #cdcdcd;
     --color-light-grey: #e5e5e5;
-    /* white */
     --color-white-90: #edeeed;  /* 90% white */
     --color-white-100: #fff; /* 100% white */
-    /* default brand color */
     --color-brand-default: #6c64e2; /* #6C64e2 #7DCD51*/
     --color-brand-default-2: #944FD0; /* #944FD0 #30D24A*/
     --color-brand-default-var: rgba(108, 100, 226, 0.1); /* default brand color with 10% opacity*/
@@ -19,7 +16,7 @@
 }
 
 html {
-    font-size: 16px; /* 16px = 1rem  by default */ /* 62.5% (another option) */
+    font-size: 1rem; /* 16px = 1rem  by default */ /* 62.5% (another option) */
 }
 
 body {
@@ -100,9 +97,9 @@ ul{
     align-items: center;
 }
 
-/* .main-logo, ul li{
+.main-logo, ul li{
     white-space: nowrap;
-} */
+}
 
 ul {
     padding-left: 0px;
@@ -116,7 +113,6 @@ ul {
 
 ul li{
     list-style-type: none;
-    /* border: 1px solid black; */
     padding: 0.375em; /* 6px/16px */
     margin-left: 0.375em; /* 6px/16px */
 }
@@ -125,8 +121,6 @@ li a {
     text-decoration: none;
     color: var(--color-default);
 }
-
-
 
 ul li:nth-last-child(1) {
     border: 1px solid var(--color-default);
@@ -141,8 +135,7 @@ ul li:hover > .hire-me {
     color: var(--color-white-100);
 }
 
-ul li:nth-last-child(1):hover,
-ul li:nth-last-child(1):active {
+ul li:nth-last-child(1):hover {
     background: linear-gradient(
         125deg, 
         var(--color-brand-default),
@@ -151,11 +144,6 @@ ul li:nth-last-child(1):active {
     border-color: var(--color-brand-default);
 }
 
-/* ul li:nth-last-child(1):hover::after {
-    content: "!";
-    color: var(--color-white-100); 
-} */
-
 
 /* --- ABOUT ME --- */
 .profile-img {
@@ -163,7 +151,7 @@ ul li:nth-last-child(1):active {
 }
 
 h1 {
-    font-size: 2.375rem; /* 38px */
+    font-size: 2.25rem; /* 38px */
     font-weight: 800;
     line-height: 0.9;
     text-transform: uppercase;
@@ -304,7 +292,7 @@ h3.project-title{
 }
 
 .other-projects {
-    margin: 0 20px;
+    margin: 0 30px;
     justify-content: space-between;
     align-items: center;
 }
@@ -359,9 +347,7 @@ h3.project-title{
     font-size: 1rem; 
 }
 
-.scroll-btn:hover,
-.scroll-btn:active {
-    /* background-color: var(--color-brand-default); */
+.scroll-btn:hover {
     background-color: var(--color-brand-default);
     color: var(--color-white-100);
 }
@@ -401,11 +387,8 @@ h3.project-title{
 }
 
 .resume-btn:hover,
-.other-project-btn:hover,
-.resume-btn:active,
-.other-project-btn:active  {
+.other-project-btn:hover {
     color: var(--color-white-100);
-    /* background-color: var(--color-brand-default); */
     background: linear-gradient(
         125deg, 
         var(--color-brand-default),
