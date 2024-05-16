@@ -185,7 +185,7 @@ h1 {
     color: var(--color-white-90);
     font-weight: 300;
     margin: 1.5em auto 2.5em;  /* 0 auto 50px/16px */
-    width: 80%; /* 350px */
+    width: 95%;
     line-height: 1.5;
 }
 
@@ -409,11 +409,14 @@ h3.project-title{
         font-size: 3rem; /* 48px */
     }
 
+    .intro-text {
+        width: 85%;
+    }
+
     h2 {
         font-size: 2.25rem; /* 36px */
     }
 
-    .profile-container { padding: 0 220px }
     .stack-container { width: 768px; margin: 0 auto;}
 
     .project-card { 
