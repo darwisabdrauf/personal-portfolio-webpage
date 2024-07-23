@@ -24,19 +24,35 @@ const myProjectData = [
         id: 3
     },
     {
+        title: "PADU Webpage Redesign",
+        description: "A cleaner and polished version of Pangkalan Data Utama (PADU) landing webpage. Built purely using HTML and Tailwind CSS Framework.",
+        tags: ["Landing Page", "Tailwind CSS", "UI Design"],
+        url: "https://padu-redesign-darwisabdrauf.netlify.app/",
+        screenshot: "",
+        id: 4
+    },
+    {
         title: "Headphone Product Page",
         description: "A clean and responsive product landing page inspired by the renowned Corsair headphone brand. Users can see the product features, pricing and use contact for any enquiry about the product",
         tags: ["HTML", "CSS", "Responsive Design", "Product Page"],
         url: "",
         screenshot: "",
-        id: 4
+        id: 5
     },
     {
-        title: "",
-        description: "",
-        tags: [""],
-        url: "",
+        title: "Add To Cart",
+        description: "A clean and responsive product landing page inspired by the renowned Corsair headphone brand. Users can see the product features, pricing and use contact for any enquiry about the product",
+        tags: ["User Input", "Firebase", "Database"],
+        url: "https://add-to-cart-darwisabdrauf.netlify.app/",
         screenshot: "",
-        id: 5
+        id: 6
+    },
+    {
+        title: "Random Quotes Generator",
+        description: "A responsive Web app where users can generate any motivational quotes and enable users to tweet the quotes in their own Twitter account.",
+        tags: ["HTML", "Web API", "CSS Flexbox"],
+        url: "https://random-quotes-gen-darwisabdrauf.netlify.app/",
+        screenshot: "",
+        id: 7
     }
 ]
